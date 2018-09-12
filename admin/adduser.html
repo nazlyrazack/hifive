@@ -3,9 +3,13 @@
     <head>
         <meta charset="utf-8"/>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>  
-         
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"> </script>
+         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+
+       
         <link href="../assets/img/apple-icon.png" rel="apple-touch-icon" sizes="76x76">
             <link href="../assets/img/favicon.png" rel="icon" type="image/png">
                 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
@@ -15,11 +19,9 @@
                 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport"/>
                 <!--     Fonts and icons     -->
                 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" rel="stylesheet" type="text/css"/>
-                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
                     <!-- CSS Files -->
                     <link href="../assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet"/>
-                    <!-- CSS Just for demo purpose, don't include it in your project -->
-                    <link href="../assets/demo/demo.css" rel="stylesheet"/>
+                    
                 </link>
             </link>
         </link>
@@ -27,11 +29,7 @@
     <body class="">
         <div class="wrapper ">
             <div class="sidebar" data-background-color="white" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
-                <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-
-        Tip 2: you can also add an image using data-image tag
-    -->
+            
                 <div class="logo">
                     <a class="simple-text logo-normal" href="#">
                         Hifive
@@ -176,22 +174,31 @@
                                     </div>
                                     <div class="card-body">
                                         <form id="add_user">
+
+                                            <div class ="row">
+
+                                                    <div class="form-group">
+                                                        <div class="col-md-9 col-md-offset-3">
+                                                             <div id="messages"></div>
+                                                         </div>
+                                                    </div>
+                                                </div>
                                             <div class="row">
-                                                <div class="col-md-5">
+                                                <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">
                                                             Username
                                                         </label>
-                                                        <input class="form-control" type="text" name="username">
+                                                        <input class="form-control" type="text" name="username" id="username">
                                                         </input>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">
                                                             Firstname
                                                         </label>
-                                                        <input class="form-control" type="text" name="firstname">
+                                                        <input class="form-control" type="text" name="firstname" id="firstname">
                                                         </input>
                                                     </div>
                                                 </div>
@@ -200,18 +207,22 @@
                                                         <label class="bmd-label-floating">
                                                             Lastname
                                                         </label>
-                                                        <input class="form-control" type="email" name="lastname">
+                                                        <input class="form-control" type="text" name="lastname" id="lastname">
                                                         </input>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <p id="p1"></p> 
+                                            <p id="p2"></p>
+                                            <p id="p3"></p>
+                                           
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">
                                                             Email
                                                         </label>
-                                                        <input class="form-control" type="text" name="email">
+                                                        <input class="form-control" id="email" type="text" name="email">
                                                         </input>
                                                     </div>
                                                 </div>
@@ -220,7 +231,7 @@
                                                         <label class="bmd-label-floating">
                                                             Password
                                                         </label>
-                                                        <input class="form-control" type="password" name="password">
+                                                        <input class="form-control" id="password" type="password" name="password">
                                                         </input>
                                                     </div>
                                                 </div>
@@ -229,18 +240,21 @@
                                                         <label class="bmd-label-floating">
                                                            Confirm Password
                                                         </label>
-                                                        <input class="form-control" type="password" name="confirm_password">
+                                                        <input class="form-control" type="password" name="confirm_password" id="confirm_password">
                                                         </input>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <p id="p4"></p> 
+                                           <p id="p5"></p>
+                                           <p id="p6"></p>
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">
-                                                            Age
+                                                            Age(optional)
                                                         </label>
-                                                        <input class="form-control" type="text" name="age">
+                                                        <input class="form-control" type="numbers" id="age" name="age">
                                                         </input>
                                                     </div>
                                                 </div>
@@ -270,27 +284,31 @@
                                                         <label class="bmd-label-floating">
                                                             Phone
                                                         </label>
-                                                        <input class="form-control" type="email" name="phone">
+                                                        <input class="form-control" type="number" id="phone" name="phone">
                                                         </input>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <p id="p7"></p> 
+                                            <p id ="p8"></p>
+                                            <p id="p9"></p>
+                                           
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">
                                                             Address1
                                                         </label>
-                                                        <input class="form-control" type="text" name="address1">
+                                                        <input class="form-control" type="text" name="address1" id="address1">
                                                         </input>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">
-                                                            Address2
+                                                            Address2(optional)
                                                         </label>
-                                                        <input class="form-control" type="text" name="address2">
+                                                        <input class="form-control" type="text" name="address2" id="address2">
                                                         </input>
                                                     </div>
                                                 </div>
@@ -299,18 +317,22 @@
                                                         <label class="bmd-label-floating">
                                                             location
                                                         </label>
-                                                        <input class="form-control" type="text" name="locaton">
+                                                        <input class="form-control" type="text" name="location" id="location">
                                                         </input>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <p id="p10"></p>
+                                            <p id="p11"></p>
+                                            <p id="p12"></p> 
+                                           
                                             <div class="row">
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label class="bmd-label-floating">
-                                                                sub locality
+                                                                sub locality(optional)
                                                             </label>
-                                                            <input class="form-control" type="text" name="sublocality">
+                                                            <input class="form-control" type="text" name="sublocality" id="sublocality">
                                                             </input>
                                                         </div>
                                                     </div>
@@ -319,7 +341,7 @@
                                                             <label class="bmd-label-floating">
                                                                 Landmark
                                                             </label>
-                                                            <input class="form-control" type="text" name="landmark">
+                                                            <input class="form-control" type="text" name="landmark" id="landmark">
                                                             </input>
                                                         </div>
                                                     </div>
@@ -328,18 +350,22 @@
                                                             <label class="bmd-label-floating">
                                                                 city
                                                             </label>
-                                                            <input class="form-control" type="text" name="city">
+                                                            <input class="form-control" type="text" name="city" id="city">
                                                             </input>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <p id="p13"></p> 
+                                                <p id="p14"></p>
+                                                <p id ="p15"></p>
+                                               
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">
                                                             District
                                                         </label>
-                                                        <input class="form-control" type="text" name="district">
+                                                        <input class="form-control" type="text" name="district" id="district">
                                                         </input>
                                                     </div>
                                                 </div>
@@ -348,43 +374,40 @@
                                                         <label class="bmd-label-floating">
                                                            State
                                                         </label>
-                                                        <input class="form-control" type="text" name="state">
+                                                        <input class="form-control" type="text" name="state" id="state">
                                                         </input>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <p id="p16"></p> 
+                                           <p id="p17"></p>
                                             <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="bmd-label-floating">
-                                                                Latitude
+                                                                Latitude(optional)
                                                             </label>
-                                                            <input class="form-control" type="text" name="latitude">
+                                                            <input class="form-control" type="text" name="latitude" id="latitude">
                                                             </input>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="bmd-label-floating">
-                                                               Longitude
+                                                               Longitude(optional)
                                                             </label>
-                                                            <input class="form-control" type="text" name="longitude">
+                                                            <input class="form-control" type="text" name="longitude" id="longitude">
                                                             </input>
                                                         </div>
                                                     </div>
 
 
                                                 </div>
+                                                <p id="p18"></p> 
+                                                <p id="p19"></p> 
 
-                                                <div class ="row">
-
-                                                    <div class="form-group">
-                                                        <div class="col-md-9 col-md-offset-3">
-                                                             <div id="messages"></div>
-                                                         </div>
-                                                    </div>
-                                                </div>
-                                            <button class="btn btn-primary pull-right" type="submit">
+                                                
+                                            <button class="btn btn-primary pull-right" type="submit" id="submit" name="submit">
                                                 Add
                                             </button>
                                             <div class="clearfix">
