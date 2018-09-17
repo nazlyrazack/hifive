@@ -31,7 +31,7 @@ $('#messages').html("<p>* Please fill the mandatory fields *</p>");
 $("#username").focus();
 return false;
 }
-// Validating Name Field.
+// Validating Username Field.
 else if (!username.match(add_regex) || username.length == 0) {
 $('#messages').html("<p>* Username can only contail alphabets and numbers *</p>"); 
 return false;

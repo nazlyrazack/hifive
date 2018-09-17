@@ -29,13 +29,18 @@ var email_regex = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]
 var add_regex = /^[0-9a-zA-Z]+$/;
 var rate_regex = /^[0-9]+$/;
 var phone_regex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+
+// var pwd_regex = /^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&]).*$/;;     strong and complex password validation.Can be used if needed.
+// Must be at least 8 characters.  At least 1 number, 1 lowercase, 1 uppercase letter.At least 1 special character from @#$%&
+
+
 // To Check Empty Form Fields.
 if (username.length == 0) {
 $('#messages').html("<p>* Please fill the mandatory fields *</p>"); 
 $("#username").focus();
 return false;
 }
-// Validating Name Field.
+// Validating username Field.
 else if (!username.match(add_regex) || username.length == 0) {
 $('#messages').html("<p>* Username can only contain alphabets and numbers *</p>"); 
 $("#username").focus();
@@ -139,7 +144,7 @@ $('#messages').html("<p>* Please enter state only characters allowed *</p>");
 $("#state").focus();
 return false;
 }
-
+// validating category field
 else if(noOfSelectedItems==0)
 {
 $('#messages').html("<p>* select category *</p>"); 

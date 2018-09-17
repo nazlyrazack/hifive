@@ -17,19 +17,19 @@ $("#service_name").focus();
 return false;
 }
 
-// Validating city Field.
+// Validating service name Field.
 else if (!service_name.match(name_regex) || service_name.length == 0) {
 $('#messages').html("<p>* Please provide service name name - contain alphabets only *</p>"); 
 $("#service_name").focus();
 return false;
 }
-// Validating district Field.
+// Validating category name Field.
 else if (!cat_name.match(name_regex) || cat_name.length == 0) {
 $('#messages').html("<p>* Please provide category name - contain alphabets only *</p>"); 
 $("#cat_name").focus();
 return false;
 }
-// Validating state Field.
+// Validating parent category name Field.
 else if (!parentcat_name.match(name_regex) || parentcat_name.length == 0) {
 $('#messages').html("<p>* Please provide parent category name - contain alphabets only *</p>"); 
 $("#parentcat_name").focus();
