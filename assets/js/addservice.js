@@ -12,26 +12,26 @@ var amt_regex = /^[0-9]+$/;
 
 // To Check Empty Form Fields.
 if (service_name.length == 0) {
-$('#messages').html("<p>* Please fill the mandatory fields *</p>"); // This Segment Displays The Validation Rule For All Fields
+$('#messages').html("<p>* Please fill the mandatory fields *</p>"); 
 $("#service_name").focus();
 return false;
 }
 
 // Validating city Field.
 else if (!service_name.match(name_regex) || service_name.length == 0) {
-$('#messages').html("<p>* Please provide service name name - contain alphabets only *</p>"); // This Segment Displays The Validation Rule For Name
+$('#messages').html("<p>* Please provide service name name - contain alphabets only *</p>"); 
 $("#service_name").focus();
 return false;
 }
 // Validating district Field.
 else if (!cat_name.match(name_regex) || cat_name.length == 0) {
-$('#messages').html("<p>* Please provide category name - contain alphabets only *</p>"); // This Segment Displays The Validation Rule For Name
+$('#messages').html("<p>* Please provide category name - contain alphabets only *</p>"); 
 $("#cat_name").focus();
 return false;
 }
 // Validating state Field.
 else if (!parentcat_name.match(name_regex) || parentcat_name.length == 0) {
-$('#messages').html("<p>* Please provide parent category name - contain alphabets only *</p>"); // This Segment Displays The Validation Rule For Name
+$('#messages').html("<p>* Please provide parent category name - contain alphabets only *</p>"); 
 $("#parentcat_name").focus();
 return false;
 }

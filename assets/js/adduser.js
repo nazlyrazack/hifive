@@ -27,46 +27,39 @@ var add_regex = /^[0-9a-zA-Z]+$/;
 var phone_regex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
 // To Check Empty Form Fields.
 if (username.length == 0) {
-$('#messages').html("<p>* Please fill the mandatory fields *</p>"); // This Segment Displays The Validation Rule For All Fields
+$('#messages').html("<p>* Please fill the mandatory fields *</p>"); 
 $("#username").focus();
 return false;
 }
 // Validating Name Field.
 else if (!username.match(add_regex) || username.length == 0) {
-$('#messages').html("<p>* Username can only contail alphabets and numbers *</p>"); // This Segment Displays The Validation Rule For Name
-$("#username").focus();
+$('#messages').html("<p>* Username can only contail alphabets and numbers *</p>"); 
 return false;
 }
 // Validating firstname Field.
 else if (!firstname.match(name_regex) || firstname.length == 0) {
 
-$('#messages').html("<p>* For your firstname please use alphabets only *</p>"); // This Segment Displays The Validation Rule For Name
+$('#messages').html("<p>* Please provide firstname - contain alphabets only *</p>");
 $("#firstname").focus();
 return false;
 }
 // Validating lastname Field.
 else if (!lastname.match(name_regex) || lastname.length == 0) {
-$('#messages').html("<p>* For your lastname please use alphabets only *</p>"); // This Segment Displays The Validation Rule For Name
+$('#messages').html("<p>* Please provide lastname - contain alphabets only *</p>"); 
 $("#lastname").focus();
 return false;
 }
 
-// // Validating Username Field.
-// else if (!(username.length >= 6 && username.length <= 8) || username.length == 0) {
-// $('#p1').text("* Please enter between 6 and 8 characters *"); // This Segment Displays The Validation Rule For Username
-// $("#username").focus();
-// return false;
-// }
 // Validating Email Field.
 else if (!email.match(email_regex) || email.length == 0) {
-$('#messages').html("<p>* Please enter a valid email address *</p>"); // This Segment Displays The Validation Rule For Email
+$('#messages').html("<p>* Please enter a valid email address *</p>"); 
 $("#email").focus();
 return false;
 }
 
 // Validating password Field.
-else if (!(password.length >= 6 && password.length <= 8) || password.length == 0) {
-$('#messages').html("<p>* Please enter between 6 and 8 characters *</p>"); // This Segment Displays The Validation Rule For Username
+else if (!(password.length >= 6 )|| password.length == 0) {
+$('#messages').html("<p>* Please enter Password - should be atleast 6 characters length *</p>"); 
 $("#password").focus();
 return false;
 }
@@ -74,7 +67,7 @@ return false;
 //validating confirm password field.
 
 else if(!confirm_password.length>=6&&confirm_password.length<=8 || confirm_password.length == 0) {
-	$('#messages').html("<p>*please enter between 6 and 8 characters*</p>");
+	$('#messages').html("<p>*please enter confirm password*</p>");
 	$("#confirm_password").focus();
 	return false;
 
@@ -88,7 +81,7 @@ else if(password!= confirm_password) {
 
 //validating gender field.
 else if (gender < 1){
-      $('#messages').html("<p>* Please enter your gender*</p>"); // This Segment Displays The Validation Rule For Zip
+      $('#messages').html("<p>* Please enter your gender*</p>"); 
 $("#inlineRadio1").focus();
 return false;
 }
@@ -96,51 +89,46 @@ return false;
 // Validating phone Field.
 else if (!phone.match(phone_regex) || phone.length == 0) {
 
-$('#messages').html("<p>* Please enter a valid phone number*</p>"); // This Segment Displays The Validation Rule For Zip
+$('#messages').html("<p>* Please enter a valid phone number*</p>");
 $("#phone").focus();
 return false;
 } 
 
-// // Validating Select Field.
-// else if (state == "Please Choose") {
-// $('#p4').text("* Please Choose any one option"); // This Segment Displays The Validation Rule For Selection
-// $("#state").focus();
-// return false;
-// }
+
 // Validating Address Field.
 else if (!address1.match(add_regex) || address1.length == 0) {
-$('#messages').html("<p>* For Address please use numbers and letters *</p>"); // This Segment Displays The Validation Rule For Address
+$('#messages').html("<p>* Please enter address - contain alphabets and numbers only *</p>"); 
 $("#address1").focus();
 return false;
 }
 // Validating location Field.
 else if (!location.match(name_regex) || location.length == 0) {
-$('#messages').html("<p>* For location only alphabets are allowed *</p>"); // This Segment Displays The Validation Rule For Name
+$('#messages').html("<p>* Please enter location only characters allowed *</p>"); 
 $("#location").focus();
 return false;
 }
 
 // Validating landmark Field.
 else if (!landmark.match(name_regex) || landmark.length == 0) {
-$('#messages').html("<p>* For landmark only alphabets are allowed *</p>"); // This Segment Displays The Validation Rule For Name
+$('#messages').html("<p>* Please enter landmark - only characters allowed *</p>"); 
 $("#landmark").focus();
 return false;
 }
 // Validating city Field.
 else if (!city.match(name_regex) || city.length == 0) {
-$('#messages').html("<p>* For city only alphabets are allowed *</p>"); // This Segment Displays The Validation Rule For Name
+$('#messages').html("<p>* Please enter city - only characters allowed *</p>"); 
 $("#city").focus();
 return false;
 }
 // Validating district Field.
 else if (!district.match(name_regex) || district.length == 0) {
-$('#messages').html("<p>*For district only alphabets are allowed*</p>"); // This Segment Displays The Validation Rule For Name
+$('#messages').html("<p>* Please enter district - only characters allowed *</p>"); 
 $("#district").focus();
 return false;
 }
 // Validating state Field.
 else if (!state.match(name_regex) || state.length == 0) {
-$('#messages').html("<p>* For your state please use alphabets only *</p>"); // This Segment Displays The Validation Rule For Name
+$('#messages').html("<p>* Please enter state - only characters allowed *</p>"); 
 $("#state").focus();
 return false;
 }

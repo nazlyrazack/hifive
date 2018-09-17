@@ -1,3 +1,4 @@
+//selecting services from the listbox
 $(function() 
 {
     function moveItems(origin,dest){

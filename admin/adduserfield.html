@@ -166,13 +166,25 @@
                                     </div>
                                     <div class="card-body">
                                         <form>
+
+                                                <div class ="row">
+
+                                                    <div class="form-group">
+                                                        <div class="col-md-12 col-md-offset-3">
+                                                             <div id="messages">
+                                                                 
+                                                             </div>
+                                                         </div>
+                                                    </div>
+                                                </div>
+
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">
                                                             Field name
                                                         </label>
-                                                        <input class="form-control" type="text">
+                                                        <input class="form-control" type="text name="field_name" id="field_name">
                                                         </input>
                                                     </div>
                                                 </div>
@@ -183,7 +195,7 @@
                                                         <label class="bmd-label-floating">
                                                             Type
                                                         </label>
-                                                        <input class="form-control" type="text">
+                                                        <input class="form-control" type="text" name="type" id="type">
                                                         </input>
                                                     </div>
                                                 </div>
@@ -194,14 +206,14 @@
                                                         <label class="bmd-label-floating">
                                                         Length
                                                         </label>
-                                                        <input class="form-control" type="text">
+                                                        <input class="form-control" type="number" name="length" id="length">
                                                         </input>
                                                     </div>
                                                 </div>
                                             </div>
                                             
                                             <a href="viewuserfield.html" class="btn btn-primary" role="button">View</a>
-                                            <button class="btn btn-primary float-right" type="submit">
+                                            <button class="btn btn-primary float-right" type="submit" name="submit" id="submit">
                                                 Add
                                             </button>
                                             <div class="clearfix">
@@ -239,6 +251,9 @@
                 </script>
                 <script src="../assets/js/core/bootstrap-material-design.min.js" type="text/javascript">
                 </script>
+
+                <!--validating adduserfield-->
+                <script type="text/javascript" src= "../assets/js/adduserfield.js"></script>
                 <!--  Google Maps Plugin    -->
                 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE">
                 </script>
