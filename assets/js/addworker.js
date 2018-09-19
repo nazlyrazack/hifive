@@ -26,10 +26,9 @@ var noOfSelectedItems=$('#lstBox2 :selected').length;
 // Initializing Variables With Regular Expressions
 var name_regex = /^[a-zA-Z]+$/;
 var email_regex = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-var add_regex = /^[0-9a-zA-Z]+$/;
 var rate_regex = /^[0-9]+$/;
 var phone_regex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
-var land_regex = /^(?:[A-Za-z]+)(?:[A-Za-z0-9 _]*)$/;
+var add_regex = /^(?:[A-Za-z]+)(?:[A-Za-z0-9 _]*)$/;
 
 
 // var pwd_regex = /^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%&]).*$/;;     strong and complex password validation.Can be used if needed.
@@ -123,7 +122,7 @@ return false;
 }
 
 // Validating landmark Field.
-else if (!landmark.match(land_regex) || landmark.length == 0) {
+else if (!landmark.match(add_regex) || landmark.length == 0) {
 $('#messages').html("<p>*Plese enter landmark - only characters and numbers allowed  *</p>"); 
 $("#landmark").focus();
 return false;
