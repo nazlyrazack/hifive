@@ -25,6 +25,7 @@ var name_regex = /^[a-zA-Z]+$/;
 var email_regex = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;;
 var add_regex = /^[0-9a-zA-Z]+$/;
 var phone_regex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
+var land_regex = /^(?:[A-Za-z]+)(?:[A-Za-z0-9 _]*)$/;
 // To Check Empty Form Fields.
 if (username.length == 0) {
 $('#messages').html("<p>* Please fill the mandatory fields *</p>"); 
@@ -109,14 +110,14 @@ return false;
 }
 
 // Validating landmark Field.
-else if (!landmark.match(name_regex) || landmark.length == 0) {
+else if (!landmark.match(land_regex) || landmark.length == 0) {
 $('#messages').html("<p>* Please enter landmark - only characters allowed *</p>"); 
 $("#landmark").focus();
 return false;
 }
 // Validating city Field.
 else if (!city.match(name_regex) || city.length == 0) {
-$('#messages').html("<p>* Please enter city - only characters allowed *</p>"); 
+$('#messages').html("<p>* Please enter city - only characters and numbers allowed *</p>"); 
 $("#city").focus();
 return false;
 }
